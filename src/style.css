@@ -173,3 +173,35 @@ button.reset {
     cursor: not-allowed;
   }
 }
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #player-hand,
+  #dealer-hand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #player-score,
+  #dealer-score {
+    font-size: 18px;
+  }
+
+  #result-message {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #hit-button,
+  #stand-button,
+  #reset-button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
