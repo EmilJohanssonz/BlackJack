@@ -173,3 +173,48 @@ button.reset {
     cursor: not-allowed;
   }
 }
+
+// Media Queries för att göra spelet mer responsivt
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .hands {
+    flex-direction: column; // Stapla händerna vertikalt på mindre skärmar
+    justify-content: center;
+  }
+
+  .hand {
+    flex: 1 1 100%; // Gör händerna fullbredd på små skärmar
+    margin: 10px 0;
+  }
+
+  .cards img {
+    width: 50px; // Minska kortstorleken för små skärmar
+  }
+  
+  .scores {
+    flex-direction: column; // Gör poängen vertikala på små skärmar
+    text-align: center;
+  }
+
+  .buttons {
+    flex-direction: column; // Gör knapparna vertikala på små skärmar
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .cards img {
+    width: 40px; // Ytterligare justering för ännu mindre skärmar
+  }
+}
