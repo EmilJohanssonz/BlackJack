@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Jack</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>BlackJack</h1>
+      </div>
+      <div class="hands">
+        <div class="hand player">
+          <h3>Player's Hand</h3>
+          <div id="player-hand" class="cards"></div>
+        </div>
+        <div class="hand dealer">
+          <h3>Dealer's Hand</h3>
+          <div id="dealer-hand" class="cards"></div>
+        </div>
+      </div>
+      <div class="scores">
+        <div class="score player">
+          Player's Score: <span id="player-score">0</span>
+        </div>
+        <div class="score dealer">
+          Dealer's Score: <span id="dealer-score">?</span>
+        </div>
+      </div>
+      <div class="result" id="result-message">Welcome to BlackJack!</div>
+      <div class="buttons">
+        <button id="hit-button" class="hit">Hit</button>
+        <button id="stand-button" class="stand">Stand</button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
