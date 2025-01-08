@@ -1,7 +1,7 @@
-// Grundinställningar
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0,auto;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -12,16 +12,14 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   background: #1e1e2f;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
 }
 
 .header {
@@ -38,16 +36,14 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  flex-wrap: wrap; // Gör så att korten kan flöda på mindre skärmar
 
   .hand {
-    flex: 1 1 45%; // Gör varje hand flexibelt med en minsta bredd på 45%
+    flex: 1;
     margin: 0 10px;
     padding: 10px;
     border: 2px dashed #555;
     border-radius: 8px;
     min-height: 150px;
-    margin-bottom: 20px; // Lite mellanrum på mindre skärmar
 
     &.player {
       border-color: #00796b;
@@ -85,7 +81,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  width: 100%; // Se till att poängen sträcker sig över hela bredden
 
   .score {
     flex: 1;
@@ -112,14 +107,13 @@ body {
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 8px;
-  background: #2e2e2e;
+  color: #f9a825;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap; // Gör knapparna flexibla och lägg dem på nya rader om det behövs
 
   button {
     padding: 10px 20px;
@@ -157,71 +151,25 @@ body {
         cursor: not-allowed;
       }
     }
-
-    &.reset {
-      background: #ff9800;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-
-      &:hover {
-        background: #e68900;
-      }
-
-      &:disabled {
-        background: #555;
-        cursor: not-allowed;
-      }
-    }
   }
 }
+button.reset {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
 
-// Media Queries för att göra spelet mer responsivt
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 15px;
+  &:hover {
+    background: #e68900;
   }
 
-  .header h1 {
-    font-size: 1.5rem;
-  }
-
-  .hands {
-    flex-direction: column; // Stapla händerna vertikalt på mindre skärmar
-    justify-content: center;
-  }
-
-  .hand {
-    flex: 1 1 100%; // Gör händerna fullbredd på små skärmar
-    margin: 10px 0;
-  }
-
-  .cards img {
-    width: 50px; // Minska kortstorleken för små skärmar
-  }
-  
-  .scores {
-    flex-direction: column; // Gör poängen vertikala på små skärmar
-    text-align: center;
-  }
-
-  .buttons {
-    flex-direction: column; // Gör knapparna vertikala på små skärmar
-    gap: 15px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header h1 {
-    font-size: 1.2rem;
-  }
-
-  .cards img {
-    width: 40px; // Ytterligare justering för ännu mindre skärmar
+  &:disabled {
+    background: #555;
+    cursor: not-allowed;
   }
 }
